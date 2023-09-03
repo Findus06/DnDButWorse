@@ -15,6 +15,8 @@ public class SkillPanel : MonoBehaviour
         characterPanel = GetComponentInParent<CharacterPanel>();
     }
 
+
+    // Updates skill panel
     public void UpdatePanel(Character character)
     {
         for (int i = 0; i < skillUIElements.Count; i++)
@@ -24,6 +26,7 @@ public class SkillPanel : MonoBehaviour
         }
     }
 
+    // "Trains" the new skills to the character
     internal void TrainSkill(CharacterSkill skill)
     {
        characterPanel.character.TrainSkill(skill);

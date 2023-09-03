@@ -14,6 +14,7 @@ public class TrainUntrainButton : MonoBehaviour, IPointerClickHandler
         skillPanel = GetComponentInParent<SkillPanel>();    
     }
 
+    // Using OnPointerClick eventing, button changes the trained value to true or false.
     public void OnPointerClick(PointerEventData eventData)
     {
         skillPanel.TrainSkill(skill);

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// stat list where to add ability points
 public enum CharacterAbility
 {
     Strength,
@@ -14,6 +15,8 @@ public enum CharacterAbility
 }
 
 [Serializable]
+
+// how the whole ability system works
 public class Ability
 {
     public int abilityScore;
@@ -36,6 +39,7 @@ public class Ability
     }
 }
 
+// List of possible skills
 public enum CharacterSkill 
 {
     Athletics,
@@ -74,6 +78,7 @@ public Skill(CharacterSkill skill, CharacterAbility ability, bool trained = fals
   this.bonus = bonus;
 }
 
+// get the ability mod value for the skill
 public int GetSkillValue(Character character)
 {
     int v = character.GetAbilityMod(abilityMod);
@@ -95,6 +100,7 @@ public class Character : ScriptableObject
 
     [SerializeField] SkillList SkillBaseStructure;
 
+    // changes ability score by 1
     public void ChangeAbilityScore(int by, CharacterAbility ability)
     {
         Ability a = abilities[(int)ability];
@@ -106,6 +112,8 @@ public class Character : ScriptableObject
     }
 
     [ContextMenu("Generate Character")]
+
+    // generates the initial stats for the character and the skill list
     public void GenerateCharacterBase()
     {
         abilities = new List<Ability>();
@@ -124,16 +132,21 @@ public class Character : ScriptableObject
         }
     } 
 
+    // gets the ability mod
     public int GetAbilityMod(CharacterAbility abilityMod)
     {
         return abilities[(int)abilityMod].Mod;
     }
 
+
+    // gets the skill level
     internal Skill GetSkill(CharacterSkill skill)
     {
         return skills[(int)skill];
     }
 
+
+    // trains the skill to the character
     internal void TrainSkill(CharacterSkill skill)
     {
       Skill skillToTrain = GetSkill(skill);

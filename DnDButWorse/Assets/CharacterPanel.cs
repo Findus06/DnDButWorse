@@ -11,7 +11,7 @@ public class CharacterPanel : MonoBehaviour
     [SerializeField] SkillPanel skillPanel;
 
 
-
+    // Updates panels inside character panel
     private void Update()
     {
         abilityPanel.UpdatePanel(character.abilities);

@@ -16,6 +16,7 @@ public class AbilityPanel : MonoBehaviour
         characterPanel = GetComponentInParent<CharacterPanel>();
     }
 
+    // Updates the Ability score panel to display the new values
     public void UpdatePanel(List<Ability> abilities)
     {
         for (int i = 0; i < abilityUI.Count; i++)
@@ -23,6 +24,8 @@ public class AbilityPanel : MonoBehaviour
             abilityUI[i].Set(abilities[i]);
         }
     }
+
+    // the two methods handling adding points and removing points
 
     public void AddAbilityScore(CharacterAbility ability)
     {
