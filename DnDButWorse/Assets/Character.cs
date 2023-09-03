@@ -128,4 +128,15 @@ public class Character : ScriptableObject
     {
         return abilities[(int)abilityMod].Mod;
     }
+
+    internal Skill GetSkill(CharacterSkill skill)
+    {
+        return skills[(int)skill];
+    }
+
+    internal void TrainSkill(CharacterSkill skill)
+    {
+      Skill skillToTrain = GetSkill(skill);
+      skillToTrain.trained = !skillToTrain.trained;
+    }
 }

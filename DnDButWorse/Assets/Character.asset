@@ -25,3 +25,77 @@ MonoBehaviour:
     ability: 4
   - abilityScore: 10
     ability: 5
+  skills:
+  - skill: 0
+    abilityMod: 0
+    trained: 0
+    bonus: 0
+  - skill: 1
+    abilityMod: 1
+    trained: 0
+    bonus: 0
+  - skill: 2
+    abilityMod: 1
+    trained: 0
+    bonus: 0
+  - skill: 3
+    abilityMod: 1
+    trained: 0
+    bonus: 0
+  - skill: 4
+    abilityMod: 3
+    trained: 0
+    bonus: 0
+  - skill: 5
+    abilityMod: 3
+    trained: 0
+    bonus: 0
+  - skill: 6
+    abilityMod: 3
+    trained: 0
+    bonus: 0
+  - skill: 7
+    abilityMod: 3
+    trained: 0
+    bonus: 0
+  - skill: 8
+    abilityMod: 3
+    trained: 0
+    bonus: 0
+  - skill: 9
+    abilityMod: 4
+    trained: 0
+    bonus: 0
+  - skill: 10
+    abilityMod: 4
+    trained: 0
+    bonus: 0
+  - skill: 11
+    abilityMod: 4
+    trained: 0
+    bonus: 0
+  - skill: 12
+    abilityMod: 4
+    trained: 0
+    bonus: 0
+  - skill: 13
+    abilityMod: 4
+    trained: 0
+    bonus: 0
+  - skill: 14
+    abilityMod: 5
+    trained: 0
+    bonus: 0
+  - skill: 15
+    abilityMod: 5
+    trained: 0
+    bonus: 0
+  - skill: 16
+    abilityMod: 5
+    trained: 0
+    bonus: 0
+  - skill: 17
+    abilityMod: 5
+    trained: 0
+    bonus: 0
+  SkillBaseStructure: {fileID: 11400000, guid: 538adcbc50ab68e4996b5985d527a1ab, type: 2}

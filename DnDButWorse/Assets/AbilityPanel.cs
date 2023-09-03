@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,4 +33,7 @@ public class AbilityPanel : MonoBehaviour
     {
         characterPanel.character.ChangeAbilityScore(-1, ability);
     }
+
+    
+    
 }
