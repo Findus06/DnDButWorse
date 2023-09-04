@@ -97,6 +97,9 @@ public class Character : ScriptableObject
 {
     public string Name;
 
+    public Race race;
+    public Class classOfCharacter;
+
     public List<Ability> abilities;
     public List<Skill> skills;
 

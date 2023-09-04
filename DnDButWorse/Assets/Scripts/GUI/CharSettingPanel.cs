@@ -33,6 +33,11 @@ public class CharSettingPanel : MonoBehaviour
             classesOptions.Add(listOfClasses.classes[i].Name);
         }
         classDropDown.AddOptions(classesOptions);
+        if (characterPanel.character.classOfCharacter != null)
+        {
+             classDropDown.value = listOfClasses.classes.IndexOf(characterPanel.character.classOfCharacter);
+        }
+       
 
         raceDropDown.ClearOptions();
         List<string> racesOptions = new List<string>();
@@ -41,6 +46,21 @@ public class CharSettingPanel : MonoBehaviour
             racesOptions.Add(listOfRaces.races[i].Name);
         }
         raceDropDown.AddOptions(racesOptions);
+        if (characterPanel.character.race != null)
+        {
+            raceDropDown.value = listOfRaces.races.IndexOf(characterPanel.character.race);
+        }
+        
+    }
+
+    public void UpdateCharacterClass()
+    {
+        characterPanel.character.classOfCharacter = listOfClasses.classes[classDropDown.value];
+    }
+
+     public void UpdateCharacterRace()
+    {
+        characterPanel.character.race = listOfRaces.races[raceDropDown.value];
     }
 
     private void UpdateNameField()
