@@ -95,6 +95,8 @@ public int GetSkillValue(Character character)
 
 public class Character : ScriptableObject
 {
+    public string Name;
+
     public List<Ability> abilities;
     public List<Skill> skills;
 
