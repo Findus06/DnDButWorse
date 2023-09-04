@@ -2912,6 +2912,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameTextField: {fileID: 313123517}
+  classDropDown: {fileID: 1383731119}
+  raceDropDown: {fileID: 8384452}
+  listOfRaces: {fileID: 11400000, guid: e10faa82490f0734b96583b508b68847, type: 2}
+  listOfClasses: {fileID: 11400000, guid: 75955111186b0dc40a4bfcb5315b7389, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
