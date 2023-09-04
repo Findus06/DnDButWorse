@@ -1,18 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CharSettingPanel : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+   [SerializeField] TMPro.TMP_InputField nameTextField;
+   CharacterPanel characterPanel;
+    void Awake()
     {
-        
+        characterPanel = GetComponentInParent<CharacterPanel>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        
+        UpdateNameField();
+    }
+
+    private void UpdateNameField()
+    {
+        nameTextField.text = characterPanel.character.Name;
+    }
+
+    public void UpdateCharacterName()
+    {
+        characterPanel.character.Name = nameTextField.text;
     }
 }
