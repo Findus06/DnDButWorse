@@ -101,4 +101,13 @@ MonoBehaviour:
     abilityMod: 5
     trained: 0
     bonus: 0
+  statistics:
+  - statistic: 0
+    abilityMod: 2
+    bonus: 0
+    currentValue: 0
+  - statistic: 1
+    abilityMod: 1
+    bonus: 0
+    currentValue: 0
   SkillBaseStructure: {fileID: 11400000, guid: 538adcbc50ab68e4996b5985d527a1ab, type: 2}

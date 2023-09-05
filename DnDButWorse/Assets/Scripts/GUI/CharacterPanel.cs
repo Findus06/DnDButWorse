@@ -9,6 +9,7 @@ public class CharacterPanel : MonoBehaviour
 
     [SerializeField] AbilityPanel abilityPanel;
     [SerializeField] SkillPanel skillPanel;
+    [SerializeField] CharacterStatisticsPanel statisticsPanel;
 
 
     // Updates panels inside character panel
@@ -16,5 +17,6 @@ public class CharacterPanel : MonoBehaviour
     {
         abilityPanel.UpdatePanel(character.abilities);
         skillPanel.UpdatePanel(character);
+        statisticsPanel.UpdatePanel(character);
     }
 }

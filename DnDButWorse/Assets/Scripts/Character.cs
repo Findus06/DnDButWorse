@@ -14,6 +14,12 @@ public enum CharacterAbility
     Charisma
 }
 
+public enum CharacterStatistic
+{
+    HP,
+    AC
+}
+
 [Serializable]
 
 // how the whole ability system works
@@ -89,7 +95,31 @@ public int GetSkillValue(Character character)
 
 }
 
+[Serializable]
+public class Statistic
+{
+    public CharacterStatistic statistic;
+    public CharacterAbility abilityMod;
+    public int bonus;
 
+    public int currentValue;
+
+    public Statistic(CharacterStatistic statistic, CharacterAbility abilityMod,int bonus = 0)
+    {
+        this.statistic = statistic;
+        this.abilityMod = abilityMod;
+        this.bonus = bonus;
+    }
+
+    public int GetStatisticValue(Character character)
+    {
+        int v = character.GetAbilityMod(this.abilityMod);
+        v += bonus;
+        v += currentValue;
+
+        return v;
+    }
+}
 
 [CreateAssetMenu]
 
@@ -102,6 +132,7 @@ public class Character : ScriptableObject
 
     public List<Ability> abilities;
     public List<Skill> skills;
+    public List<Statistic> statistics;
 
     [SerializeField] SkillList SkillBaseStructure;
 
@@ -135,6 +166,10 @@ public class Character : ScriptableObject
             Skill s = SkillBaseStructure.skills[i];
             skills.Add(new Skill(s.skill, s.abilityMod));
         }
+
+        statistics = new List<Statistic>();
+        statistics.Add(new Statistic(CharacterStatistic.HP, CharacterAbility.Constitution));
+        statistics.Add(new Statistic(CharacterStatistic.AC, CharacterAbility.Dexterity));
     } 
 
     // gets the ability mod
@@ -148,6 +183,11 @@ public class Character : ScriptableObject
     internal Skill GetSkill(CharacterSkill skill)
     {
         return skills[(int)skill];
+    }
+
+    public Statistic GetStats(CharacterStatistic stat)
+    {
+        return statistics[(int)stat];
     }
 
 
