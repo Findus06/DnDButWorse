@@ -143,9 +143,13 @@ public class Character : ScriptableObject
     {
         Ability a = abilities[(int)ability];
         a.abilityScore += by;
-        if(a.abilityScore < 1)
+        if(a.abilityScore < 8)
         {
-            a.abilityScore = 1;
+            a.abilityScore = 8;
+        }
+        if (a.abilityScore > 15)
+        {
+            a.abilityScore = 15;
         }
     }
 
@@ -155,12 +159,12 @@ public class Character : ScriptableObject
     public void GenerateCharacterBase()
     {
         abilities = new List<Ability>();
-        abilities.Add(new Ability(CharacterAbility.Strength, 10));
-        abilities.Add(new Ability(CharacterAbility.Dexterity, 10));
-        abilities.Add(new Ability(CharacterAbility.Constitution, 10));
-        abilities.Add(new Ability(CharacterAbility.Intelligence, 10));
-        abilities.Add(new Ability(CharacterAbility.Wisdom, 10));
-        abilities.Add(new Ability(CharacterAbility.Charisma, 10));
+        abilities.Add(new Ability(CharacterAbility.Strength, 8));
+        abilities.Add(new Ability(CharacterAbility.Dexterity, 8));
+        abilities.Add(new Ability(CharacterAbility.Constitution, 8));
+        abilities.Add(new Ability(CharacterAbility.Intelligence, 8));
+        abilities.Add(new Ability(CharacterAbility.Wisdom, 8));
+        abilities.Add(new Ability(CharacterAbility.Charisma, 8));
 
         skills = new List<Skill>();
         for(int i = 0; i < SkillBaseStructure.skills.Count; i++)
