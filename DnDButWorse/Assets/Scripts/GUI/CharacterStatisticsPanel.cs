@@ -6,6 +6,7 @@ public class CharacterStatisticsPanel : MonoBehaviour
 {
     [SerializeField] TMPro.TextMeshProUGUI hpText;
     [SerializeField] TMPro.TextMeshProUGUI acText;
+    [SerializeField] TMPro.TextMeshProUGUI apText;
 
     public void UpdatePanel(Character character)
     {
@@ -14,5 +15,8 @@ public class CharacterStatisticsPanel : MonoBehaviour
 
         Statistic acStat = character.GetStats(CharacterStatistic.AC);
         acText.text = acStat.GetStatisticValue(character).ToString();
+
+        Statistic apStat = character.GetStats(CharacterStatistic.AbilityPoints);
+        apText.text = apStat.GetStatisticValue(character).ToString();
     }
 }

@@ -11,13 +11,15 @@ public enum CharacterAbility
     Constitution,
     Intelligence,
     Wisdom,
-    Charisma
+    Charisma,
+    None
 }
 
 public enum CharacterStatistic
 {
     HP,
-    AC
+    AC,
+    AbilityPoints
 }
 
 [Serializable]
@@ -170,11 +172,17 @@ public class Character : ScriptableObject
         statistics = new List<Statistic>();
         statistics.Add(new Statistic(CharacterStatistic.HP, CharacterAbility.Constitution));
         statistics.Add(new Statistic(CharacterStatistic.AC, CharacterAbility.Dexterity));
+        statistics.Add(new Statistic(CharacterStatistic.AbilityPoints, CharacterAbility.None, 20));
     } 
 
     // gets the ability mod
     public int GetAbilityMod(CharacterAbility abilityMod)
     {
+        if(abilityMod == CharacterAbility.None)
+        {
+            return 0;
+        }
+
         return abilities[(int)abilityMod].Mod;
     }
 
