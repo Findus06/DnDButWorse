@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Sorcerer
   m_EditorClassIdentifier: 
   Name: Sorcerer
+  availableSkillsToTrain: 040000000e0000000a0000000f0000001100000008000000

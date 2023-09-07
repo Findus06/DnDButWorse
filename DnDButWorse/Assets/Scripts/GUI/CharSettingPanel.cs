@@ -13,6 +13,9 @@ public class CharSettingPanel : MonoBehaviour
 
    [SerializeField] ListOfRaces listOfRaces;
    [SerializeField] ListOfClasses listOfClasses;
+
+    [SerializeField] List<GameObject> trainSkillButtons;
+
     void Awake()
     {
         characterPanel = GetComponentInParent<CharacterPanel>();
@@ -55,10 +58,25 @@ public class CharSettingPanel : MonoBehaviour
 
     public void UpdateCharacterClass()
     {
+        List<CharacterSkill> originalClassSkills = characterPanel.character.classOfCharacter.availableSkillsToTrain;
+        characterPanel.character.SetTrainableSkills(originalClassSkills, false);
+
         characterPanel.character.classOfCharacter = listOfClasses.classes[classDropDown.value];
+        List<CharacterSkill> skillAvailableToTrainOnSelectedClass = listOfClasses.classes[classDropDown.value].availableSkillsToTrain;
+        characterPanel.character.SetTrainableSkills(skillAvailableToTrainOnSelectedClass);
+
+        UpdateSkillButtons();
     }
 
-     public void UpdateCharacterRace()
+    private void UpdateSkillButtons()
+    {
+       for(int i = 0; i < characterPanel.character.skills.Count; i++)
+       {
+            trainSkillButtons[i].SetActive(characterPanel.character.skills[i].canBeTrained);
+       }
+    }
+
+    public void UpdateCharacterRace()
     {
         characterPanel.character.race = listOfRaces.races[raceDropDown.value];
     }

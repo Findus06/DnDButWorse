@@ -76,14 +76,16 @@ public class Skill
 public CharacterSkill skill;
 public CharacterAbility abilityMod;
 public bool trained;
+public bool canBeTrained = false;
 public int bonus;
 
-public Skill(CharacterSkill skill, CharacterAbility ability, bool trained = false, int bonus = 0)
+public Skill(CharacterSkill skill, CharacterAbility ability, bool trained = false,bool canBeTrained = false, int bonus = 0)
 {
   this.skill = skill;
   this.abilityMod = ability;
   this.trained = trained;
   this.bonus = bonus;
+  this.canBeTrained = canBeTrained;
 }
 
 // get the ability mod value for the skill
@@ -248,5 +250,15 @@ public class Character : ScriptableObject
     {
       Skill skillToTrain = GetSkill(skill);
       skillToTrain.trained = !skillToTrain.trained;
+    }
+
+    internal void SetTrainableSkills(List<CharacterSkill> skillAvailableToTrainOnSelectedClass, bool set = true)
+    {
+        for(int i = 0; i < skillAvailableToTrainOnSelectedClass.Count; i++)
+        {
+            CharacterSkill skill = skillAvailableToTrainOnSelectedClass[i];
+            Skill skillToTrain = GetSkill(skill);
+            skillToTrain.canBeTrained = set;
+        } 
     }
 }

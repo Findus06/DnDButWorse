@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Barbarian
   m_EditorClassIdentifier: 
   Name: Barbarian
+  availableSkillsToTrain: 09000000000000000f000000070000000c0000000d000000

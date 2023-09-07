@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Fighter
   m_EditorClassIdentifier: 
   Name: Fighter
+  availableSkillsToTrain: 010000000900000000000000050000000a0000000f0000000e0000000d000000

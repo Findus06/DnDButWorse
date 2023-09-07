@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Warlock
   m_EditorClassIdentifier: 
   Name: Warlock
+  availableSkillsToTrain: 040000000e000000050000000f000000060000000700000008000000

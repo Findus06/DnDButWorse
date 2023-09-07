@@ -7,4 +7,5 @@ using UnityEngine;
 public class Class : ScriptableObject
 {
     public string Name;
+    public List<CharacterSkill> availableSkillsToTrain;
 }

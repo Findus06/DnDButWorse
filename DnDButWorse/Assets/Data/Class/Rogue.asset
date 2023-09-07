@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Rogue
   m_EditorClassIdentifier: 
   Name: Rogue
+  availableSkillsToTrain: 01000000000000000e0000000a0000000f000000060000000c00000010000000110000000200000003000000

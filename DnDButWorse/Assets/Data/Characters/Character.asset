@@ -16,90 +16,108 @@ MonoBehaviour:
   race: {fileID: 11400000, guid: d62ff25f8c2ee284bbb9051c43d78e68, type: 2}
   classOfCharacter: {fileID: 11400000, guid: 63b4eae7c65a7064ca09fc6c5790fc41, type: 2}
   abilities:
-  - abilityScore: 10
+  - abilityScore: 8
     ability: 0
-  - abilityScore: 10
+  - abilityScore: 8
     ability: 1
-  - abilityScore: 10
+  - abilityScore: 8
     ability: 2
-  - abilityScore: 10
+  - abilityScore: 8
     ability: 3
-  - abilityScore: 10
+  - abilityScore: 8
     ability: 4
-  - abilityScore: 10
+  - abilityScore: 8
     ability: 5
   skills:
   - skill: 0
     abilityMod: 0
     trained: 0
+    canBeTrained: 0
     bonus: 0
   - skill: 1
     abilityMod: 1
     trained: 0
+    canBeTrained: 0
     bonus: 0
   - skill: 2
     abilityMod: 1
     trained: 0
+    canBeTrained: 0
     bonus: 0
   - skill: 3
     abilityMod: 1
     trained: 0
+    canBeTrained: 0
     bonus: 0
   - skill: 4
     abilityMod: 3
     trained: 0
+    canBeTrained: 0
     bonus: 0
   - skill: 5
     abilityMod: 3
     trained: 0
+    canBeTrained: 0
     bonus: 0
   - skill: 6
     abilityMod: 3
     trained: 0
+    canBeTrained: 0
     bonus: 0
   - skill: 7
     abilityMod: 3
     trained: 0
+    canBeTrained: 0
     bonus: 0
   - skill: 8
     abilityMod: 3
     trained: 0
+    canBeTrained: 0
     bonus: 0
   - skill: 9
     abilityMod: 4
     trained: 0
+    canBeTrained: 0
     bonus: 0
   - skill: 10
     abilityMod: 4
     trained: 0
+    canBeTrained: 0
     bonus: 0
   - skill: 11
     abilityMod: 4
     trained: 0
+    canBeTrained: 0
     bonus: 0
   - skill: 12
     abilityMod: 4
     trained: 0
+    canBeTrained: 0
     bonus: 0
   - skill: 13
     abilityMod: 4
     trained: 0
+    canBeTrained: 0
     bonus: 0
   - skill: 14
     abilityMod: 5
     trained: 0
+    canBeTrained: 0
     bonus: 0
   - skill: 15
     abilityMod: 5
     trained: 0
+    canBeTrained: 0
     bonus: 0
   - skill: 16
     abilityMod: 5
     trained: 0
+    canBeTrained: 0
     bonus: 0
   - skill: 17
     abilityMod: 5
     trained: 0
+    canBeTrained: 0
     bonus: 0
   statistics:
   - statistic: 0

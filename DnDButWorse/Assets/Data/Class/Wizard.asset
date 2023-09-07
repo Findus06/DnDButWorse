@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Wizard
   m_EditorClassIdentifier: 
   Name: Wizard
+  availableSkillsToTrain: 04000000050000000a000000060000000b00000008000000

@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Cleric
   m_EditorClassIdentifier: 
   Name: Cleric
+  availableSkillsToTrain: 050000000a0000000b0000001100000008000000

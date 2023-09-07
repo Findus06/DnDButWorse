@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Paladin
   m_EditorClassIdentifier: 
   Name: Paladin
+  availableSkillsToTrain: 000000000a0000000f0000000b0000001100000008000000
