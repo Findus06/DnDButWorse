@@ -138,6 +138,8 @@ public class Character : ScriptableObject
 
     [SerializeField] SkillList SkillBaseStructure;
 
+    const int DefaultAbilityValue = 8;
+
     // changes ability score by 1
     public void ChangeAbilityScore(int by, CharacterAbility ability)
     {
@@ -159,12 +161,12 @@ public class Character : ScriptableObject
     public void GenerateCharacterBase()
     {
         abilities = new List<Ability>();
-        abilities.Add(new Ability(CharacterAbility.Strength, 8));
-        abilities.Add(new Ability(CharacterAbility.Dexterity, 8));
-        abilities.Add(new Ability(CharacterAbility.Constitution, 8));
-        abilities.Add(new Ability(CharacterAbility.Intelligence, 8));
-        abilities.Add(new Ability(CharacterAbility.Wisdom, 8));
-        abilities.Add(new Ability(CharacterAbility.Charisma, 8));
+        abilities.Add(new Ability(CharacterAbility.Strength, DefaultAbilityValue));
+        abilities.Add(new Ability(CharacterAbility.Dexterity, DefaultAbilityValue));
+        abilities.Add(new Ability(CharacterAbility.Constitution, DefaultAbilityValue));
+        abilities.Add(new Ability(CharacterAbility.Intelligence, DefaultAbilityValue));
+        abilities.Add(new Ability(CharacterAbility.Wisdom, DefaultAbilityValue));
+        abilities.Add(new Ability(CharacterAbility.Charisma, DefaultAbilityValue));
 
         skills = new List<Skill>();
         for(int i = 0; i < SkillBaseStructure.skills.Count; i++)
