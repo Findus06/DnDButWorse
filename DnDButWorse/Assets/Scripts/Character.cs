@@ -139,19 +139,21 @@ public class Character : ScriptableObject
     [SerializeField] SkillList SkillBaseStructure;
 
     const int DefaultAbilityValue = 8;
+    const int MinAbilityValue = 8;
+    const int MaxAbilityValue = 15;
 
     // changes ability score by 1
     public void ChangeAbilityScore(int by, CharacterAbility ability)
     {
         Ability a = abilities[(int)ability];
         a.abilityScore += by;
-        if(a.abilityScore < 8)
+        if(a.abilityScore < MinAbilityValue)
         {
-            a.abilityScore = 8;
+            a.abilityScore = MinAbilityValue;
         }
-        if (a.abilityScore > 15)
+        if (a.abilityScore > MaxAbilityValue)
         {
-            a.abilityScore = 15;
+            a.abilityScore = MaxAbilityValue;
         }
     }
 
