@@ -25,6 +25,7 @@ public class CharSettingPanel : MonoBehaviour
     {
         UpdateNameField();
         UpdateDropDownLists();
+        UpdateCharacterRace(true);
     }
 
     private void UpdateDropDownLists()
@@ -57,9 +58,13 @@ public class CharSettingPanel : MonoBehaviour
     }
 
     public void UpdateCharacterClass()
-    {
-        List<CharacterSkill> originalClassSkills = characterPanel.character.classOfCharacter.availableSkillsToTrain;
-        characterPanel.character.SetTrainableSkills(originalClassSkills, false);
+    {   
+        if(characterPanel.character.classOfCharacter != null)
+        {
+            List<CharacterSkill> originalClassSkills = characterPanel.character.classOfCharacter.availableSkillsToTrain;
+            characterPanel.character.SetTrainableSkills(originalClassSkills, false);
+        }
+        
 
         characterPanel.character.classOfCharacter = listOfClasses.classes[classDropDown.value];
         List<CharacterSkill> skillAvailableToTrainOnSelectedClass = listOfClasses.classes[classDropDown.value].availableSkillsToTrain;
@@ -76,9 +81,20 @@ public class CharSettingPanel : MonoBehaviour
        }
     }
 
-    public void UpdateCharacterRace()
+    public void UpdateCharacterRace(bool first = false)
     {
+        if(characterPanel.character.race != null)
+        {
+            if(first == false)
+            {
+                characterPanel.character.AddBonusToAbility(characterPanel.character.race.abilityBonuses, true);
+        }
+            }
+            
+
         characterPanel.character.race = listOfRaces.races[raceDropDown.value];
+
+        characterPanel.character.AddBonusToAbility(characterPanel.character.race.abilityBonuses);
     }
 
     private void UpdateNameField()

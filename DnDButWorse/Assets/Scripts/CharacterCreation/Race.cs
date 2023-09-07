@@ -6,4 +6,5 @@ using UnityEngine;
 public class Race : ScriptableObject
 {
     public string Name;
+    public List<Ability> abilityBonuses;
 }

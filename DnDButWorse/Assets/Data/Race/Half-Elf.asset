@@ -13,3 +13,10 @@ MonoBehaviour:
   m_Name: Half-Elf
   m_EditorClassIdentifier: 
   Name: Half-Elf
+  abilityBonuses:
+  - abilityScore: 2
+    ability: 5
+  - abilityScore: 1
+    ability: 1
+  - abilityScore: 1
+    ability: 2

@@ -13,3 +13,8 @@ MonoBehaviour:
   m_Name: Elf
   m_EditorClassIdentifier: 
   Name: Elf
+  abilityBonuses:
+  - abilityScore: 2
+    ability: 1
+  - abilityScore: 1
+    ability: 3

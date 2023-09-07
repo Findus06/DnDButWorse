@@ -13,3 +13,16 @@ MonoBehaviour:
   m_Name: Human
   m_EditorClassIdentifier: 
   Name: Human
+  abilityBonuses:
+  - abilityScore: 1
+    ability: 0
+  - abilityScore: 1
+    ability: 1
+  - abilityScore: 1
+    ability: 2
+  - abilityScore: 1
+    ability: 3
+  - abilityScore: 1
+    ability: 4
+  - abilityScore: 1
+    ability: 5

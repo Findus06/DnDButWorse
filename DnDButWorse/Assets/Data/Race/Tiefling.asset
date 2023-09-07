@@ -13,3 +13,8 @@ MonoBehaviour:
   m_Name: Tiefling
   m_EditorClassIdentifier: 
   Name: Tiefling
+  abilityBonuses:
+  - abilityScore: 1
+    ability: 3
+  - abilityScore: 2
+    ability: 5

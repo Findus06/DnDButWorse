@@ -8,7 +8,7 @@ public class AbilityUIElement : MonoBehaviour
     [SerializeField] TMPro.TextMeshProUGUI abilityMod;
     internal void Set(Ability ability)
     {
-        abilityScore.text = ability.abilityScore.ToString();
+        abilityScore.text = ability.AbilityScore.ToString();
         abilityMod.text = ability.Mod.ToString();
     }
 }

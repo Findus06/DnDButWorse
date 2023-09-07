@@ -13,3 +13,8 @@ MonoBehaviour:
   m_Name: Dragonborn
   m_EditorClassIdentifier: 
   Name: Dragonborn
+  abilityBonuses:
+  - abilityScore: 2
+    ability: 0
+  - abilityScore: 1
+    ability: 5

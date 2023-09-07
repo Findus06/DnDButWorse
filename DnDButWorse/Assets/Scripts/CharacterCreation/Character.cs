@@ -29,12 +29,22 @@ public class Ability
 {
     public int abilityScore;
     public CharacterAbility ability;
+    public int bonus;
+
+    public int AbilityScore
+    {
+        get
+        {
+            return abilityScore + bonus;
+        }
+    }
 
     public int Mod
     {
         get
         {
             int mod = abilityScore - 10;
+            mod += bonus;
             mod += mod < 0 ? -1 : 0;
             return mod / 2;
         }
@@ -260,5 +270,22 @@ public class Character : ScriptableObject
             Skill skillToTrain = GetSkill(skill);
             skillToTrain.canBeTrained = set;
         } 
+    }
+
+    public void AddBonusToAbility(List<Ability> abilityBonuses, bool subtract = false)
+    {
+       for(int i = 0; i < abilityBonuses.Count; i++)
+       {
+            Ability a = abilities[(int)abilityBonuses[i].ability];
+            if(subtract == false)
+            {
+                a.bonus += abilityBonuses[i].abilityScore;
+            }
+            else 
+            {
+                a.bonus -= abilityBonuses[i].abilityScore;
+            }
+            
+       }
     }
 }

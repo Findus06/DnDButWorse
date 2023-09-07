@@ -13,3 +13,8 @@ MonoBehaviour:
   m_Name: Half-Orc
   m_EditorClassIdentifier: 
   Name: Half-Orc
+  abilityBonuses:
+  - abilityScore: 2
+    ability: 0
+  - abilityScore: 1
+    ability: 2

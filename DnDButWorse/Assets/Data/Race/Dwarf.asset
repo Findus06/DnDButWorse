@@ -13,3 +13,8 @@ MonoBehaviour:
   m_Name: Dwarf
   m_EditorClassIdentifier: 
   Name: Dwarf
+  abilityBonuses:
+  - abilityScore: 2
+    ability: 2
+  - abilityScore: 2
+    ability: 0

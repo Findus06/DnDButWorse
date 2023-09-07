@@ -13,21 +13,27 @@ MonoBehaviour:
   m_Name: Character
   m_EditorClassIdentifier: 
   Name: 
-  race: {fileID: 11400000, guid: d62ff25f8c2ee284bbb9051c43d78e68, type: 2}
-  classOfCharacter: {fileID: 11400000, guid: 63b4eae7c65a7064ca09fc6c5790fc41, type: 2}
+  race: {fileID: 0}
+  classOfCharacter: {fileID: 0}
   abilities:
   - abilityScore: 8
     ability: 0
+    bonus: 6
   - abilityScore: 8
     ability: 1
+    bonus: 0
   - abilityScore: 8
     ability: 2
+    bonus: 0
   - abilityScore: 8
     ability: 3
+    bonus: 0
   - abilityScore: 8
     ability: 4
+    bonus: 0
   - abilityScore: 8
     ability: 5
+    bonus: 3
   skills:
   - skill: 0
     abilityMod: 0

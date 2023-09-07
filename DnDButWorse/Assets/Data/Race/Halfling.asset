@@ -13,3 +13,8 @@ MonoBehaviour:
   m_Name: Halfling
   m_EditorClassIdentifier: 
   Name: Halfling
+  abilityBonuses:
+  - abilityScore: 3
+    ability: 5
+  - abilityScore: 1
+    ability: 2
