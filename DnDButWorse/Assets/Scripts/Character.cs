@@ -146,15 +146,51 @@ public class Character : ScriptableObject
     public void ChangeAbilityScore(int by, CharacterAbility ability)
     {
         Ability a = abilities[(int)ability];
+
+        if(a.abilityScore + by > MaxAbilityValue || a.abilityScore + by < MinAbilityValue)
+        {
+            return;
+        }
+
+        Statistic abilityPoints = statistics[(int)CharacterStatistic.AbilityPoints];
+        if (by > 0)
+        {
+            #region increase ability score
+            if (a.abilityScore+1 > 13)
+            {
+                if (abilityPoints.currentValue >= 2)
+                {
+                    abilityPoints.bonus -=2;
+                }
+            }
+            else
+            {
+                if (abilityPoints.currentValue >= 1)
+                {
+                    abilityPoints.bonus -= 1;
+                }
+                else
+                {
+                    return;
+                }
+            }
+            #endregion
+        }
+        else
+        {
+            #region decrease ability score
+            if(a.abilityScore > 13)
+            {
+                abilityPoints.bonus += 2;
+            }
+            else
+            {
+                abilityPoints.bonus += 1;
+            }
+            #endregion
+        }
         a.abilityScore += by;
-        if(a.abilityScore < MinAbilityValue)
-        {
-            a.abilityScore = MinAbilityValue;
-        }
-        if (a.abilityScore > MaxAbilityValue)
-        {
-            a.abilityScore = MaxAbilityValue;
-        }
+        
     }
 
     [ContextMenu("Generate Character")]
