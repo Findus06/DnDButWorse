@@ -19,7 +19,8 @@ public enum CharacterStatistic
 {
     HP,
     AC,
-    AbilityPoints
+    AbilityPoints,
+    Damage
 }
 
 [Serializable]
@@ -226,9 +227,10 @@ public class Character : ScriptableObject
         }
 
         statistics = new List<Statistic>();
-        statistics.Add(new Statistic(CharacterStatistic.HP, CharacterAbility.Constitution));
-        statistics.Add(new Statistic(CharacterStatistic.AC, CharacterAbility.Dexterity));
+        statistics.Add(new Statistic(CharacterStatistic.HP, CharacterAbility.Constitution, 10));
+        statistics.Add(new Statistic(CharacterStatistic.AC, CharacterAbility.Dexterity, 10));
         statistics.Add(new Statistic(CharacterStatistic.AbilityPoints, CharacterAbility.None, 20));
+        statistics.Add(new Statistic(CharacterStatistic.Damage, CharacterAbility.Strength));
     } 
 
     // gets the ability mod

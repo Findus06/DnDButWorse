@@ -25,7 +25,8 @@ public class CharSettingPanel : MonoBehaviour
     {
         UpdateNameField();
         UpdateDropDownLists();
-        UpdateCharacterRace(true);
+        UpdateCharacterRace(false);
+        UpdateSkillButtons();
     }
 
     private void UpdateDropDownLists()
@@ -88,8 +89,8 @@ public class CharSettingPanel : MonoBehaviour
             if(first == false)
             {
                 characterPanel.character.AddBonusToAbility(characterPanel.character.race.abilityBonuses, true);
-        }
             }
+         }
             
 
         characterPanel.character.race = listOfRaces.races[raceDropDown.value];
