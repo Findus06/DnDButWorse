@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Character
   m_EditorClassIdentifier: 
   Name: 
-  race: {fileID: 0}
-  classOfCharacter: {fileID: 0}
+  race: {fileID: 11400000, guid: d62ff25f8c2ee284bbb9051c43d78e68, type: 2}
+  classOfCharacter: {fileID: 11400000, guid: 63b4eae7c65a7064ca09fc6c5790fc41, type: 2}
   abilities:
   - abilityScore: 8
     ability: 0
-    bonus: 6
+    bonus: 2
   - abilityScore: 8
     ability: 1
     bonus: 0
@@ -33,12 +33,12 @@ MonoBehaviour:
     bonus: 0
   - abilityScore: 8
     ability: 5
-    bonus: 3
+    bonus: 1
   skills:
   - skill: 0
     abilityMod: 0
     trained: 0
-    canBeTrained: 0
+    canBeTrained: 1
     bonus: 0
   - skill: 1
     abilityMod: 1
@@ -73,7 +73,7 @@ MonoBehaviour:
   - skill: 7
     abilityMod: 3
     trained: 0
-    canBeTrained: 0
+    canBeTrained: 1
     bonus: 0
   - skill: 8
     abilityMod: 3
@@ -83,7 +83,7 @@ MonoBehaviour:
   - skill: 9
     abilityMod: 4
     trained: 0
-    canBeTrained: 0
+    canBeTrained: 1
     bonus: 0
   - skill: 10
     abilityMod: 4
@@ -98,12 +98,12 @@ MonoBehaviour:
   - skill: 12
     abilityMod: 4
     trained: 0
-    canBeTrained: 0
+    canBeTrained: 1
     bonus: 0
   - skill: 13
     abilityMod: 4
     trained: 0
-    canBeTrained: 0
+    canBeTrained: 1
     bonus: 0
   - skill: 14
     abilityMod: 5
@@ -113,7 +113,7 @@ MonoBehaviour:
   - skill: 15
     abilityMod: 5
     trained: 0
-    canBeTrained: 0
+    canBeTrained: 1
     bonus: 0
   - skill: 16
     abilityMod: 5
@@ -137,5 +137,9 @@ MonoBehaviour:
   - statistic: 2
     abilityMod: 6
     bonus: 20
+    currentValue: 0
+  - statistic: 3
+    abilityMod: 0
+    bonus: 0
     currentValue: 0
   SkillBaseStructure: {fileID: 11400000, guid: 538adcbc50ab68e4996b5985d527a1ab, type: 2}
